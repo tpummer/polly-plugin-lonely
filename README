@@ -1,0 +1,15 @@
+How to build
+
+Well you will need polly to run this plugin, get it from here: https://github.com/skuzzle/polly and follow the instructions in the wiki
+
+If you want to build this plugin extract the sources to: polly/projects/at.nullpointer.polly.plugin.lonely
+
+In Eclipse you have to add some dependencies:
+ * de.skuzzle.polly.sdk
+ * de.skuzzle.polly.tools
+ 
+ Then you can simple runt he ant build, to produce
+  * polly/target/at.nullpoitner.polly.plugin.lonely/at.nullpointer.polly.plugin.lonely.jar
+  * polly/target/at.nullpoitner.polly.plugin.lonely/at.nullpointer.polly.plugin.lonely.properties
+ 
+ Because this is not an official plugin you have to move these two files manually into the plugin folder of your core polly installation
