@@ -8,6 +8,7 @@ import java.util.TimerTask;
 import java.util.TreeSet;
 
 import at.nullpointer.polly.plugin.lonely.commands.Permission;
+import at.nullpointer.polly.plugin.lonely.commands.StatusCommand;
 import at.nullpointer.polly.plugin.lonely.commands.TimeSetting;
 import at.nullpointer.polly.plugin.lonely.commands.ToggleCommand;
 import at.nullpointer.polly.plugin.lonely.core.AnswerTask;
@@ -56,10 +57,18 @@ public class MyPlugin
 
         addListener( myPolly );
 
-        this.addCommand( new ToggleCommand( myPolly, this.eventManager ) );
+        registerCommands( myPolly );
 
         startMonitor( myPolly, statusMap );
 
+    }
+
+
+    private void registerCommands( final MyPolly myPolly )
+            throws DuplicatedSignatureException {
+
+        this.addCommand( new ToggleCommand( myPolly, this.eventManager ) );
+        this.addCommand( new StatusCommand( myPolly, eventManager ) );
     }
 
 

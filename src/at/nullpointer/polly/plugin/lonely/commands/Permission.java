@@ -11,7 +11,9 @@ public enum Permission {
     /**
      * Users with this permission are able to toggle the lonelyplugin on and off
      */
-    TOGGLE_LONELY( "polly.permission.TOGGLE_LONELY" );
+    TOGGLE_LONELY( "polly.permission.TOGGLE_LONELY" ),
+
+    STATUS_LONELY( "polly.permission.STATUS_LONELY" );
 
     /**
      * String representation of the permission
